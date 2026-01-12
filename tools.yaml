@@ -1,0 +1,53 @@
+system_dependencies:
+  - name: libpcap-dev
+    check: test -f /usr/include/pcap/pcap.h
+    install: sudo apt install -y libpcap-dev build-essential
+tools:
+  - name: go
+    check: go version
+    install: sudo apt install -y golang-go
+
+  - name: subfinder
+    install: go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+
+  - name: assetfinder
+    install: go install github.com/tomnomnom/assetfinder@latest
+
+  - name: amass
+    install: sudo apt install -y amass
+
+  - name: dnsx
+    install: go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest
+
+  - name: httpx
+    install: go install github.com/projectdiscovery/httpx/cmd/httpx@latest
+
+  - name: naabu
+    install: go install github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+
+  - name: nmap
+    install: sudo apt install -y nmap
+
+  - name: whatweb
+    install: sudo apt install -y whatweb
+
+  - name: gau
+    install: go install github.com/lc/gau/v2/cmd/gau@latest
+
+  - name: waybackurls
+    install: go install github.com/tomnomnom/waybackurls@latest
+
+  - name: katana
+    install: go install github.com/projectdiscovery/katana/cmd/katana@latest
+
+  - name: subjs
+    install: go install github.com/lc/subjs@latest
+
+  - name: arjun
+    install: pipx install arjun
+
+  - name: ffuf
+    install: go install github.com/ffuf/ffuf@latest
+
+  - name: nuclei
+    install: go install github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
